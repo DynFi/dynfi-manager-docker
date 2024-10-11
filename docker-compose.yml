@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+
+  dynfi-manager:
+    image: dynfi/dynfi-manager
+    container_name: dynfi-manager
+    hostname: dynfi-manager
+    volumes:
+      - ./conf:/data/conf
+    links:
+      - dfmdb:dfmdb
+    ports:
+      - '9090:9090'
+    
+  dfmdb:
+    image: mongo:3.6
+    container_name: dynfi-manager-mongo-db
+    volumes:
+      - mongo-db:/data/db
+    command: ["mongod"]
+
+volumes:
+  mongo-db:
+    driver: local

@@ -8,7 +8,7 @@ To get started with this project, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://git@github.com:DynFi/dynfi-manager-docker.git
-   cd dfm-docker
+   cd dynfi-manager-docker
    ```
 
 2. **Start the Services**:

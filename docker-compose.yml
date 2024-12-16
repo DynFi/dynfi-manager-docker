@@ -1,18 +1,17 @@
 version: '3.8'
 
 services:
-
   dynfi-manager:
     image: dynfi/dynfi-manager
     container_name: dynfi-manager
     hostname: dynfi-manager
     volumes:
       - ./conf:/data/conf
-    links:
-      - dfmdb:dfmdb
     ports:
       - '9090:9090'
-    
+    depends_on:
+      - dfmdb
+
   dfmdb:
     image: mongo:3.6
     container_name: dynfi-manager-mongo-db

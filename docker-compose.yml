@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   dynfi-manager:
     image: dynfi/dynfi-manager
@@ -13,7 +11,7 @@ services:
       - dfmdb
 
   dfmdb:
-    image: mongo:3.6
+    image: mongo
     container_name: dynfi-manager-mongo-db
     volumes:
       - mongo-db:/data/db

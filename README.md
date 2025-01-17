@@ -31,9 +31,9 @@ To get started with this project, follow these steps:
 4. **Update DynFi Manager**:
    - To update the container to use the latest version of DynFi Manager, use:
      ```bash
-    git pull
-    docker-compose pull dynfi-manager
-    docker-compose up -d --no-deps --force-recreate dynfi-manager
+     git pull
+     docker-compose pull dynfi-manager
+     docker-compose up -d --no-deps --force-recreate dynfi-manager
      ```
 
 5. **Completely Remove the Containers**:

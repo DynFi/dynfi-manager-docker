@@ -28,7 +28,15 @@ To get started with this project, follow these steps:
      docker-compose up
      ```
 
-4. **Completely Remove the Containers**:
+4. **Update DynFi Manager**:
+   - To update the container to use the latest version of DynFi Manager, use:
+     ```bash
+    git pull
+    docker-compose pull dynfi-manager
+    docker-compose up -d --no-deps --force-recreate dynfi-manager
+     ```
+
+5. **Completely Remove the Containers**:
    If you want to remove the containers, networks, and associated data:
    ```bash
    docker-compose down --volumes --remove-orphans
